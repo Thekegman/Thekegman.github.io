@@ -1,0 +1,273 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{eurosym}
+
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\bigskip\thepage/\pageref{LastPage}}
+
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeGenItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingTWO}[1]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\newcommand{\resumeSubsubItem}[1]{\item\small{#1}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{www.linkedin.com/in/kevin-keegan-engineer}{\Large Kevin Keegan} \quad {Dublin, Ireland}} & \href{mailto:kevinkeegans@gmail.com}{kevinkeegans@gmail.com}\\
+  \href{www.linkedin.com/in/kevin-keegan-engineer}{www.linkedin.com/in/kevin-keegan-engineer} & +353-876428470 \\
+\end{tabular*}
+
+
+\section{Summary}
+ Electronic Engineer with 3 years of industry experience.\\
+1\textsuperscript{st} Class Honours Masters degree in Electronic \& Computer Engineering from University College Dublin.\\
+Experienced in \textbf{Verilog, Python, C, Java, MATLAB \& Linux}.\\
+Interested primarily in digital signal processing, digital ASIC design and embedded systems.
+\bigskip
+%---------SKILLS-----------
+\section{Technical Skills}
+
+  \resumeItemListStart
+    \resumeSubItem{Languages/Tools} {Verilog, Python, Bash, Java, C/C++, LISP, ASM (MIPS32, 8051), MATLAB, Git, \LaTeX.}
+    \resumeSubItem{Network Programming}{Experienced in TCP/IP Socket programming in Python, C \& Java.}
+     \resumeSubItem{Concurrent Programming}{Experience in multiprocessing \& multi-threaded development.}
+     \resumeSubItem{Operating Systems} {Professional experience developing in Linux and Windows environments.}
+     \resumeSubItem{Embedded Systems} {Experience in front-end Digital Design (RTL) \& developing for microcontrollers such as Arduino, Micropython \& ADuC841. Knowledgeable in the use of Hardware Timers/Counters, Interrupt service routines and SPI communication.}
+     \resumeSubItem{Digital Signal Processing} {Knowledgeable in Fourier analysis, digital filtering and digital communication theory.}
+  \resumeItemListEnd
+\bigskip
+
+%-----------Experience-----------------
+
+\section{Professional Experience}
+\medskip
+ \resumeSubHeadingListStart
+    \resumeSubheading
+      {Dialog Semiconductor, ASIC \& IP Division} {Dublin, Ireland}
+      {Digital Design Engineer}{Jan 2020 -- Present}
+      \resumeItemListStart
+         \resumeGenItem{Front-End Digital Design} 
+         \resumeGenItem{Developed software to automatically generate a Verilog implementation of a frequently redesigned block, along with its System Verilog testbench.}
+      \resumeItemListEnd
+      \bigskip
+    \resumeSubheading
+      {Susquehanna International Group (SIG)} {Dublin, Ireland}
+      {Market Data Engineer}{Sept 2018 -- Nov 2019}
+      \resumeItemListStart
+      \resumeGenItem{Monitoring and maintaining critical market data systems.}
+      \resumeGenItem{Pcap file analysis via Wireshark/tshark}
+      \resumeGenItem{Developed validation tools to test new software before pushing to production.}
+    \resumeGenItem{Implemented a system in Python \& Bash to archive daily market data recordings from company colocations to a central archive.}
+     \resumeGenItem{
+         Developed a set of scripts to analyse the latency of a  market data system when subject to a high data rates.}
+         %mention fpga replaying
+    \resumeGenItem{On call work. When on call, I was the first point of contact for issues regarding SIG's market data infrastructure.}
+      \resumeItemListEnd
+      \bigskip
+     \resumeSubheading
+      {Intel Corporation, Internet of Things and Wearables Group} {Kildare, Ireland}
+      {Physical Design Engineer Intern}{Jan 2017 -- Aug 2017}
+      \resumeItemListStart
+         \resumeGenItem{Worked in a team designing a system in TCL to automate the design, layout \& routing of a custom CMOS block.}
+      \resumeItemListEnd
+      \bigskip
+      \resumeSubheading
+      {University College Dublin} {Dublin, Ireland}
+      {Voluntary Teaching Assistant}{Sept 2015 -- Nov 2015}
+      \resumeItemListStart
+        \resumeGenItem{Voluntary Teaching Assistant in weekly laboratories for the engineering module,\\ 
+
+EEEN20010	Computer Engineering I: Data Structures and Algorithms through C.}
+      \resumeItemListEnd
+\bigskip
+      \resumeSubheading
+      {FireEye, Inc.} {Dublin, Ireland}
+      {Software Engineer Intern}{May 2015 - July 2015}
+      \resumeItemListStart
+        \resumeGenItem{Developed BASH scripts to facilitate and automate product testing.}
+         \resumeGenItem{Built a customized, kickstarted centOS distro to include the configurations and packages necessary for running \& testing a company product.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\clearpage
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University College Dublin}{Dublin, Ireland}
+      {Master of Engineering in Electronic \& Computer Engineering; 1st Class Honours}{Sept 2016 -- Sept 2018}
+      \resumeItemListStart
+
+      \resumeItem{GPA} {3.84/4.2}
+        \resumeItem{\href{https://newsroom.intel.ie/news-releases/intel-partners-ucd-sponsor-masters-students/}{UCD Intel Masters Scholarship}}
+          {Awarded by Intel to top five students entering ME program.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {University of California Los Angeles}{Los Angeles, CA}
+      {Exchange - Electrical \& Electronic Engineering;  \textbf{GPA: 3.18/4.0}}{Jan 2016 -- Jun 2016}
+    \resumeSubheading
+      {University College Dublin}{Dublin, Ireland}
+      {Bachelor of Science in Electrical \& Electronic Engineering; 1st Class Honours}{Sept 2013 -- Sept 2016}
+      \resumeItemListStart
+      \resumeItem{GPA} {4.09/4.2}
+       \resumeItem{Entrance Scholar}
+          {Awarded to top academic achievers entering UCD from secondary school.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Col\'aiste Eoin}{Dublin, Ireland}
+      {Irish Leaving Certificate;  \textbf{Points: 595}}{Sept 2007 -- Jun 2013}
+  \resumeSubHeadingListEnd
+
+%-----------Projects-----------------
+\section{Projects}
+  \resumeSubHeadingListStart 
+  
+    \resumeSubheading
+      {UCD Masters Research Project}{Dublin, Ireland}
+      {Digital and Analog Implementations of Visible Light Communication}{Sep 2017 -- May 2018}
+      \resumeItemListStart
+        \resumeGenItem{Project Thesis:  \textbf{\href{https://thekegman.github.io/Thesis.pdf} {thekegman.github.io/Thesis.pdf}}}
+        \resumeGenItem{My project proposes a real-time digital, visible light communication system employing a form of On-Off Keying modulation. It is implemented using an Arduino UNO based LED-Photodiode communication link. It can successfully transfer files between computers over a distance of up to 1.8m.}
+        \resumeGenItem{Software for this system was developed in C \& Python 3.}
+      \resumeItemListEnd
+    \resumeSubheading
+     {Custom Guitar Tuner} {}
+     {Analog amplifier \& DSP running on pyboard} {May 2020}
+     \resumeItemListStart
+     \resumeGenItem {Designed an Op-amp based electric guitar amplifier, implemented on a breadboard.}
+     \resumeGenItem {This amplified signal is sampled using a pyboard microcontroller.}
+     \resumeGenItem {The pyboard runs an auto-correlation based pitch estimation algorithm I developed.}
+     \resumeGenItem {This algorithm estimates the fundamental frequency of the string being played.}
+     \resumeGenItem {LEDs are used to indicate if the string is in-tune, flat or sharp.}
+     \resumeItemListEnd      
+\resumeSubheading
+{Noodle Dance Camera Filter} {}
+{Python Script} {Jan 2020}
+\resumeItemListStart
+\resumeGenItem {Python script using primarily numpy to recreate the popular Camera filter on TikTok.}
+\resumeGenItem {Source: \textbf{\href{https://github.com/Thekegman/noodledance}{github.com/Thekegman/noodledance}}}
+\resumeItemListEnd
+\resumeSubheading
+     {Spotify Collab Queue} {}
+     {WebApp} {Feb 2019}
+     \resumeItemListStart
+     \resumeGenItem {Web app with a backend implemented in Python using the Flask framework.}
+     \resumeGenItem {Using Spotify's API, this web app allows people to collaborate in what music is played by having them submit songs to a live queue.}
+      \resumeGenItem {Source: \textbf{\href{https://github.com/Thekegman/spotify-collab-queue} {github.com/Thekegman/spotify-collab-queue}}}
+     \resumeItemListEnd
+
+%
+\resumeSubheading
+     {Nikon Trigger} {}
+     {Microcontroller project} {Jan 2018}
+     \resumeItemListStart
+    
+     \resumeGenItem {Program implemented for pyboard that uses an IR LED to remotely trigger a Nikon camera's shutter release.}
+     \resumeGenItem {The 38kHz NEC protocol used by the Nikon `ML-L3" camera remote is replicated using PWM hardware available on pyboard.}
+     \resumeGenItem {Source: \textbf{\href{https://github.com/Thekegman/Nikon-Trigger-for-MicroPython} {github.com/Thekegman/Nikon-Trigger-for-MicroPython}}}
+     \resumeItemListEnd
+%
+\resumeSubheading
+    {Android Apps} {}
+     % {Guess That Word} {}
+      {Implemented in Java, available on Google Play} {}
+      \resumeItemListStart
+        \resumeGenItem {Guess That Word} {May 2016} 
+        \resumeGenItem {The Maze Extravaganza 3D - \textit{OpenGl}} {Aug 2013}
+        \resumeGenItem {The Maze Extravaganza - \textit{36k+ downloads}} {July 2012}
+        
+        \resumeGenItem {
+        Developer page: \textbf{\href{http://tiny.cc/x32oaz}{http://tiny.cc/x32oaz}}}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+     
+
+
+
+
+
+
+
+
+%-----------ACTIVITIES & INTERESTS-----------------
+%\section{Personal}
+%  \resumeItemListStart
+%    \resumeSubItem{Languages}{English, Spanish \& Irish.}
+% 	\resumeSubItem{Guitar}{Grade 5 Classical Guitar, Trinity College London.}
+% \resumeItemListEnd
+
+%-------------------------------------------
+\end{document}

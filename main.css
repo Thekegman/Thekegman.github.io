@@ -104,7 +104,7 @@ li {
     flex-direction: column;
     padding: 40px;
     max-width: 864px;
-    min-height: 100vh;
+    /*    min-height: 100vh;*/
     margin: 0 auto
 }
 

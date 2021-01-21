@@ -1,4 +1,4 @@
-﻿.header .menu {
+.header .menu {
     margin: 10px 0
 }
 
@@ -221,6 +221,8 @@ img.right {
 }
 
 .download-link {
+    position: relative;
+    left: -10px;
     font-size: 0.9rem;
     padding: 5px 10px;
     color: var(--accent);

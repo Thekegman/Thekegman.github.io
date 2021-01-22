@@ -31,7 +31,6 @@ function loadCV() {
         window.location.hash = "#cv";
     }
 }
-
 function setActive(ul_id, active_id) {
     var ul = document.getElementById(ul_id);
     var items = ul.getElementsByTagName("li");

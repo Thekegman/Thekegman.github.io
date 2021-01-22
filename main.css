@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300;700&family=Work+Sans:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300;700&family=Work+Sans:wght@300;700');
 @import url('https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css');
 html {
     box-sizing: border-box
@@ -81,6 +81,8 @@ body {
 
 a {
     color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 p {

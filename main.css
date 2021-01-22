@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300;700&family=Work+Sans:wght@300;700&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css');
 html {
     box-sizing: border-box
@@ -13,10 +13,10 @@ html {
 body {
     text-align: left;
     margin: 40px auto;
-    max-width: 670px;
-    padding: 0 10px;
+    max-width: 672px;
+    padding: 0 16px;
     line-height: 1.6;
-    font-family: Ubuntu, Hack, 'Open Sans';
+    font-family: 'Work Sans', Ubuntu, Hack, 'Open Sans';
     font-size: 18px;
     background-color: var(--background);
     color: var(--color);
@@ -24,6 +24,12 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-overflow-scrolling: touch;
     -webkit-text-size-adjust: 100%
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
 }
 
 .header {
@@ -74,7 +80,7 @@ body {
 }
 
 a {
-    color: inherit
+    color: inherit;
 }
 
 p {
@@ -124,7 +130,6 @@ img.right {
 .download-link {
     position: relative;
     left: -10px;
-    font-size: 0.9rem;
     padding: 5px 10px;
     color: var(--accent);
     border-radius: 45px;

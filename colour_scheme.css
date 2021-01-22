@@ -1,8 +1,8 @@
 :root {
-    --accent: #24afff;
+    --accent: #00d2ff;
     --accent-alpha-70: rgba(35, 174, 255, .70);
     --accent-alpha-20: rgba(35, 176, 255, 0.2);
-    --background: #363636;
+    --background: #192734;
     --color: #ece9e9;
     --border-color: rgba(255, 255, 255, .1)
 }

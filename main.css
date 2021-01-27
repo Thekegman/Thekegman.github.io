@@ -62,19 +62,27 @@ body {
     perspective: 100vw;
     transform: rotateY( 0deg);
     transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
 
 .card-inner.flipped {
     transform: rotateY( -180deg);
 }
 
-.card-inner>.front {
+.front {
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    transform: rotateY( 0deg);
 }
 
-.card-inner>.back {
+.back {
     position: absolute;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     transform: rotateY( -180deg);
 }
 

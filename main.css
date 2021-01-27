@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300;700&family=Work+Sans:wght@300;700');
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300;700&family=Work+Sans:wght@300;700');
 @import url('https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css');
 html {
     box-sizing: border-box
@@ -16,7 +16,7 @@ body {
     max-width: 672px;
     padding: 0 16px;
     line-height: 1.6;
-    font-family: 'Work Sans', Ubuntu, Hack, 'Open Sans';
+    font-family: 'Work Sans', Ubuntu, Hack, 'Open Sans', 'Comic Sans MS';
     font-size: 18px;
     background-color: var(--background);
     color: var(--color);
@@ -50,6 +50,53 @@ body {
 .menu li {
     margin-right: 20px;
     margin-bottom: 10px;
+}
+
+.card {
+    display: flex;
+}
+
+.card-inner {
+    transition: transform 1s ease, top 1s ease;
+    transform-origin: top;
+    perspective: 100vw;
+    transform: rotateY( 0deg);
+    transform-style: preserve-3d;
+}
+
+.card-inner.flipped {
+    transform: rotateY( -180deg);
+}
+
+.card-inner>.front {
+    backface-visibility: hidden;
+}
+
+.card-inner>.back {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY( -180deg);
+}
+
+.video {
+    padding-top: 20px;
+    right: -15%;
+}
+
+.youtube {
+    width: 768px;
+    height: 432px;
+}
+
+@media only screen and (max-width: 768px) {
+    .youtube {
+        width: auto;
+        height: auto;
+    }
+    .video {
+        padding-top: 20px;
+        right: 10px;
+    }
 }
 
 .post {

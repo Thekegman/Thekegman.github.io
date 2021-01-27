@@ -8,6 +8,8 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">-->
     <link rel="stylesheet" href="colour_scheme.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#1e1e1e">
     <script src="blogscript.js" defer></script>
@@ -20,12 +22,21 @@
                 <li id="cv-link"><a onclick="loadCV()">cv</a></li>
                 <li id="ch1-link"><a onclick="loadCH1()">chapter1</a></li>
                 <li id="ch2-link"><a onclick="loadCH2()">chapter2</a></li>
+                <li id="ch2-link"><a onclick="flip()">flip</a></li>
                 <li><a href="https://github.com/Thekegman" target="_blank" rel="noopener noreferrer">github</a></li>
             </ul>
         </nav>
     </header>
     <hr>
-    <div class="post" id="content"></div>
+    <div class="card" id="maincard">
+        <div class="card-inner">
+            <div class="back video">
+                <iframe class="youtube" src="https://www.youtube.com/embed/DLzxrzFCyOs"></iframe>
+            </div>
+            <div class="post front" id="content"></div>
+        </div>
+    </div>
+    </div>
     <footer class="footer">
         <span>© Kevin Keegan</span>
     </footer>

@@ -5,7 +5,6 @@ async function fetchHtmlAsText(url) {
 async function loadtext(url) {
     const contentDiv = document.getElementById("content");
     contentDiv.innerHTML = await fetchHtmlAsText(url);
-
 }
 
 function loadCH1() {
@@ -20,7 +19,7 @@ function loadCH2() {
     ret = setActive("header-list", "ch2-link");
     if (ret == 0) {
         loadtext("moby2.html");
-        window.location.hash = "#moby1";
+        window.location.hash = "#moby2";
     }
 }
 
@@ -31,6 +30,17 @@ function loadCV() {
         window.location.hash = "#cv";
     }
 }
+
+function flip() {
+    card = document.getElementById("maincard");
+    content = card.getElementsByClassName("card-inner")[0]
+    if (content.classList.contains('flipped')) {
+        content.classList.remove('flipped');
+    } else {
+        content.classList.add('flipped')
+    }
+}
+
 function setActive(ul_id, active_id) {
     var ul = document.getElementById(ul_id);
     var items = ul.getElementsByTagName("li");
@@ -49,6 +59,7 @@ function setActive(ul_id, active_id) {
     }
     return ret;
 }
+
 hash = "";
 if (window.location.hash) {
     hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character

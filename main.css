@@ -54,10 +54,11 @@ body {
 
 .card {
     display: flex;
+    backface-visibility: hidden
 }
 
 .card-inner {
-    transition: transform 1s ease, top 1s ease;
+    transition: transform 1s ease-out, top 1s ease-out;
     transform-origin: top;
     perspective: 100vw;
     transform-style: preserve-3d;

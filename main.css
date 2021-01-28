@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300;700&family=Work+Sans:wght@300;700');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300;700&family=Work+Sans:wght@300;700');
 @import url('https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css');
 html {
     box-sizing: border-box
@@ -60,11 +60,7 @@ body {
     transition: transform 1s ease, top 1s ease;
     transform-origin: top;
     perspective: 100vw;
-    transform: rotateY( 0deg);
     transform-style: preserve-3d;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
 }
 
 .card-inner.flipped {
@@ -74,7 +70,6 @@ body {
 .front {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     transform: rotateY( 0deg);
 }
 
@@ -82,7 +77,6 @@ body {
     position: absolute;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     transform: rotateY( -180deg);
 }
 

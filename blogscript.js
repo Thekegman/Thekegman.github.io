@@ -1,34 +1,18 @@
+var HOME_HASH = "cv";
+var HASH_MAP = {
+    "cv": "cv.html",
+    "ch1": "chapter1.html",
+    "ch2": "chapter2.html"
+};
+
 async function fetchHtmlAsText(url) {
     return await (await fetch(url)).text();
 }
 
 async function loadtext(url) {
+    console.log(hash);
     const contentDiv = document.getElementById("content");
     contentDiv.innerHTML = await fetchHtmlAsText(url);
-}
-
-function loadCH1() {
-    ret = setActive("header-list", "ch1-link");
-    if (ret == 0) {
-        loadtext("moby1.html");
-        window.location.hash = "#moby1";
-    }
-}
-
-function loadCH2() {
-    ret = setActive("header-list", "ch2-link");
-    if (ret == 0) {
-        loadtext("moby2.html");
-        window.location.hash = "#moby2";
-    }
-}
-
-function loadCV() {
-    ret = setActive("header-list", "cv-link");
-    if (ret == 0) {
-        loadtext("cv.html");
-        window.location.hash = "#cv";
-    }
 }
 
 function flip() {
@@ -60,14 +44,14 @@ function setActive(ul_id, active_id) {
     return ret;
 }
 
-hash = "";
-if (window.location.hash) {
-    hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+window.onhashchange = function() {
+    hash = window.location.hash.substring(1).toLowerCase();
+    if (!(hash in HASH_MAP)) {
+        hash = HOME_HASH;
+    }
+    url = HASH_MAP[hash];
+    setActive("header-list", hash.concat('-link'));
+    loadtext(url);
 }
-if (hash == "moby1") {
-    loadCH1();
-} else if (hash == "moby2") {
-    loadCH2();
-} else {
-    loadCV();
-}
+
+window.onhashchange();

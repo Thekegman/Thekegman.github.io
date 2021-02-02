@@ -19,34 +19,13 @@
     <header class="header">
         <nav>
             <ul id="header-list" class="menu">
-                <li id="cv-link"><a onclick="loadCV()">cv</a></li>
-                <li id="ch1-link"><a onclick="loadCH1()">chapter1</a></li>
-                <li id="ch2-link"><a onclick="loadCH2()">chapter2</a></li>
+                <li id="cv-link"><a href="#cv">cv</a></li>
+                <li id="ch1-link"><a href="#ch1">chapter1</a></li>
+                <li id="ch2-link"><a href="#ch2">chapter2</a></li>
                 <li id="fliper"><a onclick="flip()">flip</a></li>
                 <li><a href="https://github.com/Thekegman" target="_blank" rel="noopener noreferrer">github</a></li>
             </ul>
         </nav>
-        <!-- TradingView Widget BEGIN -->
-        <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NYSE-GME/" rel="noopener" target="_blank"><span class="blue-text">GME Quotes</span></a> by TradingView</div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-                {
-                    "symbol": "NYSE:GME",
-                    "width": 350,
-                    "height": 220,
-                    "locale": "en",
-                    "dateRange": "1D",
-                    "colorTheme": "dark",
-                    "trendLineColor": "#37a6ef",
-                    "underLineColor": "rgba(55, 166, 239, 0.15)",
-                    "isTransparent": true,
-                    "autosize": false,
-                    "largeChartUrl": ""
-                }
-            </script>
-        </div>
-        <!-- TradingView Widget END -->
     </header>
     <hr>
     <div class="card" id="maincard">

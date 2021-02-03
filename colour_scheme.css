@@ -1,5 +1,7 @@
 :root {
     --accent: #00d2ff;
+    --accent2: #ff4901;
+    --accent2-alpha-70: rgb(255, 73, 1, 0.7);
     --accent-alpha-70: rgba(35, 174, 255, .70);
     --accent-alpha-20: rgba(35, 176, 255, 0.2);
     --background: #192734;

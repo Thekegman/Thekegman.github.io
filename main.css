@@ -1,8 +1,18 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@300;700&family=Work+Sans:wght@300;700');
 @import url('https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css');
 html {
-    box-sizing: border-box
+    box-sizing: border-box;
+    /*   overflow-y: scroll;*/
 }
+
+
+/*
+::-webkit-scrollbar {
+    /* Remove scrollbar space 
+    width: 0px;
+    background: transparent;
+    /* Optional: just make scrollbar invisible 
+}*/
 
 *,
 *:before,
@@ -44,12 +54,14 @@ body {
 }
 
 .menu li.active {
-    color: var(--accent)
+    color: var(--accent2);
+    border-bottom: none
 }
 
 .menu li {
     margin-right: 20px;
     margin-bottom: 10px;
+    border-bottom: 2px solid var(--accent2-alpha-70);
 }
 
 .card {
@@ -58,7 +70,7 @@ body {
 }
 
 .card-inner {
-    transition: transform 1s ease-out, top 1s ease-out;
+    transition: transform 1s ease-in, top 1s ease-out;
     transform-origin: top;
     perspective: 100vw;
     transform-style: preserve-3d;
@@ -133,7 +145,7 @@ body {
 a {
     color: inherit;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 p {

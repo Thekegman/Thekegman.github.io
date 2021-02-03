@@ -1,7 +1,11 @@
-spline = document.getElementById("spline");
-
-var spline_context = spline.getContext("2d");
-spline_context.font = "16px sans-serif";
-// background
-spline_context.fillStyle = "#c9c9c9";
-spline_context.fillRect(0, 0, spline.width, spline.height);
+function show_canvas() {
+    var canvas = document.getElementById("spline");
+    canvas.width = document.body.offsetWidth;
+    canvas.height = canvas.width;
+    var spline_context = canvas.getContext("2d");
+    // background
+    spline_context.fillStyle = "#eeeeee";
+    spline_context.fillRect(0, 0, spline.width, spline.height);
+}
+show_canvas();
+window.onresize = show_canvas;

@@ -24,6 +24,7 @@ function addScript(src) {
     var s = document.createElement('script');
     s.type = 'text/javascript';
     s.src = src;
+    s.defer = true
     document.getElementsByTagName('head')[0].appendChild(s);
 }
 

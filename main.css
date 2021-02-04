@@ -54,6 +54,9 @@ body {
 }
 
 .menu li.active {
+    border-radius: 6px;
+    padding: 4px;
+    box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, .8);
     color: var(--accent2);
     border-bottom: none
 }

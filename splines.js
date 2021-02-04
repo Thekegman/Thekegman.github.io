@@ -1,16 +1,16 @@
 var dotx;
 var doty;
-var spline;
+var CSCALE = 3;
+var spline_canvas;
 var spline_context;
 
 function draw_grid() {
-    size = spline.offsetWidth;
+    size = spline_canvas.offsetWidth;
     segCount = 10;
     segSize = size / segCount;
-    console.log(size, segSize);
     spline_context.beginPath();
+
     for (var pos = 0; pos < size; pos += segSize) {
-        console.log(pos);
         spline_context.moveTo(pos, 0);
         spline_context.lineTo(pos, size);
         spline_context.moveTo(0, pos);
@@ -24,18 +24,23 @@ function draw_grid() {
 
 function draw() {
     spline_context.fillStyle = "#eeeeee";
-    spline_context.fillRect(0, 0, spline.width, spline.height);
+    spline_context.fillRect(0, 0, spline_canvas.width, spline_canvas.height);
     draw_grid(spline_context);
 }
 
 function build_canvas() {
-    spline_context = spline.getContext("2d");
-    spline.width = document.getElementsByTagName('header')[0].offsetWidth * 0.7;
-    spline.height = spline.width;
+    size_on_screen = Math.round(document.getElementsByTagName('header')[0].offsetWidth * 0.8)
+    spline_canvas.style.width = size_on_screen + "px";
+    spline_canvas.style.height = size_on_screen + "px";
+    spline_canvas.width = size_on_screen * CSCALE;
+    spline_canvas.height = size_on_screen * CSCALE;
+    spline_context = spline_canvas.getContext("2d");
+    spline_context.scale(CSCALE, CSCALE)
     draw();
 }
 
 function splines_init() {
-    spline = document.getElementById("spline");
+    spline_canvas = document.getElementById("spline");
     requestAnimationFrame(build_canvas);
+    window.onresize = splines_init;
 }

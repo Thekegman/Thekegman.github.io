@@ -5,26 +5,27 @@ var HASH2URL = {
     "ch2": "chapter2.html",
     "splines": "splines.html"
 };
-var HASH2SCRIPT = {
-    "splines": "splines.js"
+var HASH2FUNC = {
+    "splines": splines_init
 };
 async function fetchAsText(url) {
     return await (await fetch(url)).text();
 }
 
-async function loadContent(url, script) {
+async function loadContent(url, script_init) {
     const contentDiv = document.getElementById("content");
     contentDiv.innerHTML = await fetchAsText(url);
-    if (script) {
-        addScript(script);
+    if (script_init) {
+        script_init()
     }
 }
 
-function addScript(src) {
-    var s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.src = src;
-    document.getElementsByTagName('head')[0].appendChild(s);
+function import_script() {
+    var script = document.createElement('script');
+    scripts = document.getElementsByTagName('script')[0];
+    script.src = url;
+    script.defer = true;
+    scripts.parentNode.insertBefore(script, scripts);
 }
 
 function flip() {
@@ -62,9 +63,9 @@ window.onhashchange = function() {
         hash = HOME_HASH;
     }
     url = HASH2URL[hash];
-    script = HASH2SCRIPT[hash];
+    script_init = HASH2FUNC[hash];
     setActive("header-list", hash.concat('-link'));
-    loadContent(url, script);
+    loadContent(url, script_init);
 }
 
 window.onhashchange();

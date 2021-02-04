@@ -193,11 +193,10 @@ img.right {
 }
 
 .download-link {
-    position: relative;
     left: -10px;
-    padding: 5px 10px;
+    padding: 8px 16px;
     color: var(--accent);
-    border-radius: 45px;
+    border-radius: 4px;
 }
 
 .download-link:hover {

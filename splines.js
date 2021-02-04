@@ -1,17 +1,7 @@
 var dotx;
 var doty;
-var spline = document.getElementById("spline");
+var spline;
 var spline_context;
-
-function docReady(fn) {
-    // see if DOM is already available
-    if (document.readyState === "complete" || document.readyState === "interactive") {
-        // call on next available tick
-        setTimeout(fn, 1);
-    } else {
-        document.addEventListener("DOMContentLoaded", fn);
-    }
-}
 
 function draw_grid() {
     size = spline.offsetWidth;
@@ -40,9 +30,12 @@ function draw() {
 
 function build_canvas() {
     spline_context = spline.getContext("2d");
-    spline.width = document.getElementsByTagName('header')[0].offsetWidth;
+    spline.width = document.getElementsByTagName('header')[0].offsetWidth * 0.7;
     spline.height = spline.width;
     draw();
 }
 
-requestAnimationFrame(build_canvas);
+function splines_init() {
+    spline = document.getElementById("spline");
+    requestAnimationFrame(build_canvas);
+}

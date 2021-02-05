@@ -58,7 +58,7 @@ body {
 }
 
 .menu li {
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
     text-align: center;
     padding: 3px;
     margin-right: 7px;

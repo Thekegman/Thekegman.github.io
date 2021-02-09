@@ -1,12 +1,10 @@
 var HOME_HASH = "cv";
 var HASH2URL = {
     "cv": "cv.html",
-    "ch1": "chapter1.html",
-    "ch2": "chapter2.html",
-    "splines": "splines.html"
+    "conway": "conway.html"
 };
 var HASH2FUNC = {
-    "splines": splines_init
+    "conway": conway_init
 };
 async function fetchAsText(url) {
     return await (await fetch(url)).text();

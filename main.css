@@ -226,3 +226,10 @@ img.right {
     padding: 6px!important;
     min-width: auto!important;
 }
+
+#conway {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}

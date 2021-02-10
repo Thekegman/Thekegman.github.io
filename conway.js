@@ -7,6 +7,7 @@ var board_h;
 var view_w;
 var view_h;
 var timeout;
+var frame_delay = 30;
 var run_animation = false;
 var first_open = true;
 
@@ -94,7 +95,7 @@ function draw() {
     if (timeout)
         clearTimeout(timeout);
     if (run_animation)
-        timeout = setTimeout(() => requestAnimationFrame(draw), 30);
+        timeout = setTimeout(() => requestAnimationFrame(draw), frame_delay);
 }
 
 function build_canvas() {
@@ -134,6 +135,9 @@ function conway_init() {
         let x = Math.floor(Math.random() * (board_w - 3) + 3);
         let y = Math.floor(Math.random() * (board_h - 3) + 3);
         add_glider(x, y);
+    });
+    document.getElementById('conway-slider').addEventListener('input', function() {
+        frame_delay = 340 / this.value;
     });
     run_animation = true;
     window.addEventListener('resize', onresize);

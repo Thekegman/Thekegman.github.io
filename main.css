@@ -207,16 +207,20 @@ img.right {
     margin-left: auto
 }
 
-.download-link {
-    left: -10px;
+.button {
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
     padding: 8px 16px;
-    color: var(--accent);
     border-radius: 4px;
+    color: var(--color);
+    background-color: var(--button);
 }
 
-.download-link:hover {
+.button:hover {
+    background-color: var(--accent);
     color: var(--background);
-    background-color: var(--color);
 }
 
 .bmc-btn {

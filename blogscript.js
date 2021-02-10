@@ -3,18 +3,25 @@ var HASH2URL = {
     "cv": "cv.html",
     "conway": "conway.html"
 };
-var HASH2FUNC = {
+var HASH2INITFUNC = {
     "conway": conway_init
+};
+var HASH2ENDFUNC = {
+    "conway": conway_end
 };
 async function fetchAsText(url) {
     return await (await fetch(url)).text();
 }
+var lasthash;
 
-async function loadContent(url, script_init) {
+async function loadContent(url, init_func, end_func) {
     const contentDiv = document.getElementById("content");
     contentDiv.innerHTML = await fetchAsText(url);
-    if (script_init) {
-        script_init()
+    if (end_func) {
+        end_func();
+    }
+    if (init_func) {
+        init_func();
     }
 }
 
@@ -61,9 +68,11 @@ window.onhashchange = function() {
         hash = HOME_HASH;
     }
     url = HASH2URL[hash];
-    script_init = HASH2FUNC[hash];
+    end_func = HASH2ENDFUNC[lasthash];
+    init_func = HASH2INITFUNC[hash];
     setActive("header-list", hash.concat('-link'));
-    loadContent(url, script_init);
+    loadContent(url, init_func, end_func);
+    lasthash = hash;
 }
 
 window.onhashchange();
